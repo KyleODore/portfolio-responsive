@@ -5,6 +5,16 @@ $secondary-color: #b7a57a;
 	transition: all 0.5s ease-out;
 }
 
+// Set text color
+
+@function setTextColor($color) {
+	@if (lightness($color) > 40) {
+		@return #000;
+	} @else {
+		@return #fff;
+	}
+}
+
 // Media query mixins
 @mixin mediaSm {
 	@media screen and (max-width: 500px) {
