@@ -6,6 +6,7 @@
 	"homepage": "https://kyleodore.dev",
 	"scripts": {
 		"sass": "node-sass -w scss/ -o dist/css/ --recursive",
+		"add-domain": "echo \"kyleodore.dev\" > build/CNAME",
 		"deploy": "gh-pages -d dist"
 	},
 	"author": "Kyle Tomlin O'Dore",

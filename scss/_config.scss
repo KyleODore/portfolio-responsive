@@ -17,7 +17,7 @@ $secondary-color: #b7a57a;
 
 // Media query mixins
 @mixin mediaSm {
-	@media screen and (max-width: 500px) {
+	@media screen and (min-width:400px) and (max-width: 500px) {
 		@content;
 	}
 }
