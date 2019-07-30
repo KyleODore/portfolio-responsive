@@ -43,7 +43,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	opacity: 0.9;
+	opacity: 0.98;
 	visibility: hidden;
 
 	&.show {
@@ -116,7 +116,7 @@
 		font-size: 30px;
 		text-transform: uppercase;
 		padding: 1rem 0;
-		font-weight: 300;
+		font-weight: 400;
 		color: setTextColor($primary-color);
 		text-decoration: none;
 

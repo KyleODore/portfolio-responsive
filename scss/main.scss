@@ -85,6 +85,7 @@ main {
 	.bio-image {
 		grid-area: bioimage;
 		margin: auto;
+		height: 100%;
 		border-radius: 50%;
 		border: $secondary-color 3px solid;
 	}
@@ -111,6 +112,49 @@ main {
 		padding: 0.5rem;
 		border-bottom: $secondary-color 5px solid;
 	}
+}
+
+// Work/Projects page
+.projects {
+	display: grid;
+	grid-gap: 0.7rem;
+	grid-template-columns: repeat(3, 1fr);
+
+	img {
+		width: 100%;
+		border: 3px setTextColor($primary-color) solid;
+
+		&:hover {
+			opacity: 0.5;
+			border-color: $secondary-color;
+			@include easeOut;
+		}
+	}
+}
+
+// Button Styles
+.btn {
+	display: block;
+	padding: 0.5rem 1rem;
+	border: 0;
+	margin-bottom: 0.3rem;
+
+	&:hover {
+		background-color: $secondary-color;
+		color: setTextColor($secondary-color);
+	}
+}
+
+.btn-dark {
+	@extend .btn;
+	background: darken($color: $primary-color, $amount: 50);
+	color: #fff;
+}
+
+.btn-light {
+	@extend .btn;
+	background: lighten($color: $primary-color, $amount: 50);
+	color: #333;
 }
 
 #main-footer {
