@@ -5,6 +5,13 @@ const menuBranding = document.querySelector(".menu-branding");
 const menuNav = document.querySelector(".menu-nav");
 const navItem = document.querySelectorAll(".nav-item");
 
+// Influence background color based on local time of user
+var date = new Date();
+var hour = date.getHours();
+var bgColorFactor = 50 * Math.sin((Math.PI * (hour - 6)) / 12) + 50;
+var body = document.querySelector("body");
+body.setAttribute("bg-color-factor", bgColorFactor);
+
 // Set initial state of menu
 let showMenu = false;
 
