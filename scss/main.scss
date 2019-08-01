@@ -26,11 +26,17 @@ h3 {
 	font-weight: 400;
 
 	&.lg-heading {
+		display: flex;
 		font-size: 6rem;
 
 		.download-resume {
+			display: inline-block;
 			line-height: 0;
 			font-size: 1rem;
+
+			&:focus {
+				outline: none;
+			}
 
 			form {
 				display: block;
@@ -38,7 +44,7 @@ h3 {
 
 				.btn-download {
 					display: inline-block;
-					margin: auto 2.5rem auto auto;
+					margin: none;
 				}
 			}
 		}
@@ -84,15 +90,29 @@ main {
 		}
 	}
 
-	.download-resume {
-		margin-top: 1.5vh;
-	}
-
 	&#home {
 		overflow: hidden;
 
 		h1 {
 			margin-top: 20vh;
+		}
+
+		.download-resume {
+			margin-top: 2vh;
+
+			button:focus {
+				outline: none;
+			}
+		}
+	}
+
+	&#about {
+		.download-resume {
+			margin: auto 2rem auto auto;
+
+			button:focus {
+				outline: none;
+			}
 		}
 	}
 }
@@ -215,7 +235,6 @@ main {
 	#copy-popup {
 		display: flex;
 		justify-content: space-evenly;
-		vertical-align: bottom;
 
 		h3 {
 			background: #4bb543;
