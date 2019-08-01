@@ -45,24 +45,25 @@
 			</h2>
 			<div class="boxes">
 				<div>
-                    <span class="text-secondary">Email:
-                    </span> kyleodore@gmail.com
+                    <span class="text-secondary">Email: </span>
+					<button id="email" class="btn btn-copy" onclick="copyToClipboard('email')"><span>kyleodore@gmail.com</span></button>
                 </div>
 				<div>
-                    <span class="text-secondary">Phone Number:
-                    </span> +1 (206) 434 9661
+                    <span class="text-secondary">Phone Number: </span>
+					<button id="phoneNumber" class="btn btn-copy" onclick="copyToClipboard('phoneNumber')">+1 (206) 434 9661</button>
                 </div>
 				<div>
-                    <span class="text-secondary">Address:
-                    </span> 1812 N 40TH ST, APT B, SEATTLE WA 98103-8352
+                    <span class="text-secondary">Address: </span>
+					<button id="address" class="btn btn-copy" onclick="copyToClipboard('address')">1812 N 40TH ST, APT B, SEATTLE WA 98103-8352</i></button>
                 </div>
 			</div>
+			<div id="copy-popup" class="hidden"><h3 id="copy-popup-h3"></h3></div>
 		</main>
 
 		<footer id="main-footer">
 			Copyright &copy; 2019
 		</footer>
 
-		<script src="./js/main.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>

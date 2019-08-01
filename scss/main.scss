@@ -27,6 +27,21 @@ h3 {
 
 	&.lg-heading {
 		font-size: 6rem;
+
+		.download-resume {
+			line-height: 0;
+			font-size: 1rem;
+
+			form {
+				display: block;
+				float: right;
+
+				.btn-download {
+					display: inline-block;
+					margin: auto 2.5rem auto auto;
+				}
+			}
+		}
 	}
 
 	&.sm-heading {
@@ -69,6 +84,10 @@ main {
 		}
 	}
 
+	.download-resume {
+		margin-top: 1.5vh;
+	}
+
 	&#home {
 		overflow: hidden;
 
@@ -83,7 +102,8 @@ main {
 	grid-gap: 1.875rem;
 	grid-template-areas:
 		"bioimage bio bio"
-		"job1 job2 job3";
+		"job1 job2 job3"
+		"job4 job5 job6";
 	grid-template-columns: repeat(3, 1fr);
 
 	.bio-image {
@@ -111,10 +131,21 @@ main {
 		grid-area: job3;
 	}
 
+	.job-4 {
+		grid-area: job4;
+	}
+
 	.job {
 		background: lighten($color: $primary-color, $amount: 5);
 		padding: 0.5rem;
 		border-bottom: $secondary-color 0.3rem solid;
+		overflow: hidden;
+
+		h6 {
+			font-size: 0.9rem;
+			font-weight: 300;
+			margin: 0.2rem auto;
+		}
 	}
 }
 
@@ -137,28 +168,65 @@ main {
 }
 
 // Contact page
-.boxes {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: center;
-	margin-top: 1rem;
+#contact {
+	.boxes {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		margin-top: 1rem;
 
-	div {
-		font-size: 2rem;
-		border: 0.25rem setTextColor($primary-color) solid;
-		padding: 1.5rem 2.5rem;
-		margin-bottom: 3rem;
+		div {
+			font-size: 2rem;
+			border: 0.25rem setTextColor($primary-color) solid;
+			padding: 1.5rem 2.5rem;
+			margin-bottom: 3rem;
 
-		@include easeOut;
+			@include easeOut;
 
-		&:hover {
-			padding: 1.25rem 2rem;
-			background: $secondary-color;
-			color: setTextColor($secondary-color);
-
-			span {
+			&:hover {
+				padding: 1.25rem 2rem;
+				background: $secondary-color;
 				color: setTextColor($secondary-color);
+
+				span {
+					color: setTextColor($secondary-color);
+				}
+			}
+
+			.btn-copy {
+				display: inline-block;
+				background: none;
+				cursor: pointer;
+				color: setTextColor($primary-color);
+				font-size: 2rem;
+
+				&:focus {
+					outline: none;
+				}
+
+				&:hover {
+					background: none;
+				}
+			}
+		}
+	}
+
+	#copy-popup {
+		display: flex;
+		justify-content: space-evenly;
+		vertical-align: bottom;
+
+		h3 {
+			background: #4bb543;
+			color: #fff;
+			display: inline-block;
+			text-align: center;
+			margin: auto;
+			padding: 1rem;
+
+			&.failed {
+				background-color: #ff0000;
 			}
 		}
 	}
@@ -170,6 +238,8 @@ main {
 	padding: 0.5rem 1rem;
 	border: 0;
 	margin-bottom: 0.3rem;
+	font-size: 1.2rem;
+	line-height: 100%;
 
 	&:hover {
 		background-color: $secondary-color;

@@ -95,7 +95,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #444444;
+  background: #444;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -114,6 +114,21 @@ h3 {
   h1.lg-heading,
   h3.lg-heading {
     font-size: 6rem; }
+    h1.lg-heading .download-resume,
+    h1.lg-heading .download-resume,
+    h3.lg-heading .download-resume {
+      line-height: 0;
+      font-size: 1rem; }
+      h1.lg-heading .download-resume form,
+      h1.lg-heading .download-resume form,
+      h3.lg-heading .download-resume form {
+        display: block;
+        float: right; }
+        h1.lg-heading .download-resume form .btn-download,
+        h1.lg-heading .download-resume form .btn-download,
+        h3.lg-heading .download-resume form .btn-download {
+          display: inline-block;
+          margin: auto 2.5rem auto auto; }
   h1.sm-heading,
   h1.sm-heading,
   h3.sm-heading {
@@ -143,6 +158,8 @@ main {
       main .icons a:hover {
         color: #b7a57a;
         transition: all 0.5s ease-out; }
+  main .download-resume {
+    margin-top: 1.5vh; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -151,7 +168,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 1.875rem;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3" "job4 job5 job6";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -168,10 +185,17 @@ main {
     grid-area: job2; }
   .about-info .job-3 {
     grid-area: job3; }
+  .about-info .job-4 {
+    grid-area: job4; }
   .about-info .job {
     background: #515151;
     padding: 0.5rem;
-    border-bottom: #b7a57a 0.3rem solid; }
+    border-bottom: #b7a57a 0.3rem solid;
+    overflow: hidden; }
+    .about-info .job h6 {
+      font-size: 0.9rem;
+      font-weight: 300;
+      margin: 0.2rem auto; }
 
 .projects {
   display: grid;
@@ -185,30 +209,56 @@ main {
       border-color: #b7a57a;
       transition: all 0.5s ease-out; }
 
-.boxes {
+#contact .boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem; }
-  .boxes div {
+  #contact .boxes div {
     font-size: 2rem;
     border: 0.25rem #fff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     transition: all 0.5s ease-out; }
-    .boxes div:hover {
+    #contact .boxes div:hover {
       padding: 1.25rem 2rem;
       background: #b7a57a;
       color: #000; }
-      .boxes div:hover span {
+      #contact .boxes div:hover span {
         color: #000; }
+    #contact .boxes div .btn-copy {
+      display: inline-block;
+      background: none;
+      cursor: pointer;
+      color: #fff;
+      font-size: 2rem; }
+      #contact .boxes div .btn-copy:focus {
+        outline: none; }
+      #contact .boxes div .btn-copy:hover {
+        background: none; }
+
+#contact #copy-popup {
+  display: flex;
+  justify-content: space-evenly;
+  vertical-align: bottom; }
+  #contact #copy-popup h3 {
+    background: #4bb543;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    padding: 1rem; }
+    #contact #copy-popup h3.failed {
+      background-color: #ff0000; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: 0.3rem; }
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  line-height: 100%; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background-color: #b7a57a;
     color: #000; }
