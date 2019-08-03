@@ -44,7 +44,7 @@ function toggleMenu() {
 function copyToClipboard(buttonId) {
 	const copyObj = {
 		email: "kyleodore@gmail.com",
-		phoneNumber: "+1 (206) 434 9661",
+		phoneNumber: "+1 (206) 434-9661",
 		address: "1812 N 40TH ST, APT B, SEATTLE WA 98103-8352"
 	};
 
@@ -55,10 +55,10 @@ function copyToClipboard(buttonId) {
 		function() {
 			/* clipboard successfully set */
 			copyItem.classList.remove("hidden");
-			copyH3.innerText = "Copied the text: " + copyObj[buttonId];
+			copyH3.innerText = "Copied: " + copyObj[buttonId];
 			setTimeout(function() {
 				copyItem.classList.add("hidden");
-			}, 1500);
+			}, 1000);
 		},
 		function() {
 			/* clipboard write failed */

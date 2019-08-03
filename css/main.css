@@ -41,21 +41,21 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #262626;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #515151;
+    background: #404040;
     transition: all 0.5s ease-out;
     transform: translate3d(0, 100%, 0); }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 15.625rem;
-      height: 15.625rem;
+      width: 250px;
+      height: 250px;
       background: url(../img/portrait-small.jpg);
       border-radius: 50%;
       border: solid 0.25rem #b7a57a; }
@@ -95,7 +95,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
+  background: #333;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -140,7 +140,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(56, 56, 56, 0.5); }
 
 a {
   color: #fff;
@@ -176,16 +176,20 @@ main {
     margin: auto 2rem auto auto; }
     main#about .download-resume button:focus {
       outline: none; }
+  main#about p {
+    text-indent: 25px; }
+  main button.btn-download {
+    cursor: pointer; }
 
 .about-info {
   display: grid;
   grid-gap: 1.875rem;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3" "job4 job5 job6";
+  grid-template-areas: "bioimage bio bio" "job1 job2 job2" "job3 job4 job5";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
-    height: 100%;
+    width: 100%;
     border-radius: 50%;
     border: #b7a57a 0.25rem solid; }
   .about-info .bio {
@@ -200,7 +204,7 @@ main {
   .about-info .job-4 {
     grid-area: job4; }
   .about-info .job {
-    background: #515151;
+    background: #404040;
     padding: 0.5rem;
     border-bottom: #b7a57a 0.3rem solid;
     overflow: hidden; }
@@ -279,13 +283,13 @@ main {
   color: #fff; }
 
 .btn-light {
-  background: #c4c4c4;
+  background: #b3b3b3;
   color: #333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
+  background: #1a1a1a;
   color: #fff;
   height: 3.75rem; }
 
@@ -297,13 +301,19 @@ main {
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
-@media screen and (min-width: 501px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   main {
     align-items: center;
     text-align: center; }
     main .lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      display: block; }
+    main#about .download-resume {
+      margin: 1rem 0 0 0;
+      display: inline-block; }
+    main#home form {
+      display: inline-flex; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -313,27 +323,26 @@ main {
     div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
   .menu-nav {
-    height: 75vh;
+    height: 60vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 1.5rem; }
   .menu-branding {
-    height: 25vh;
+    height: 40vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url(img/portrait_small.jpg);
-      width: 9.375rem;
-      height: 9.375rem; }
+      background: url(../img/portrait-small.jpg); }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
-    grid-template-columns: 1fr; }
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "job4" "job5";
+    grid-template-columns: 1fr;
+    text-align: left; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
-@media screen and (min-width: 400px) and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "job4" "job5";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: 1fr; } }
