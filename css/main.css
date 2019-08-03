@@ -152,7 +152,8 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #b7a57a; }
+  color: #b7a57a;
+  display: flex; }
 
 main {
   padding: 4rem;
@@ -179,7 +180,8 @@ main {
   main#about p {
     text-indent: 25px; }
   main button.btn-download {
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.5s ease-out; }
 
 .about-info {
   display: grid;
