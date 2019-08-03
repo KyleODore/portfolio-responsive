@@ -70,6 +70,7 @@ header {
 
 .text-secondary {
 	color: $secondary-color;
+	display: flex;
 }
 
 main {
@@ -122,6 +123,7 @@ main {
 
 	button.btn-download {
 		cursor: pointer;
+		@include easeOut();
 	}
 }
 
