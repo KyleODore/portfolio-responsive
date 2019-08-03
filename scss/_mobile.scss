@@ -21,6 +21,20 @@
 		.lg-heading {
 			line-height: 1;
 			margin-bottom: 1rem;
+			display: block;
+		}
+
+		&#about {
+			.download-resume {
+				margin: 1rem 0 0 0;
+				display: inline-block;
+			}
+		}
+
+		&#home {
+			form {
+				display: inline-flex;
+			}
 		}
 	}
 
@@ -36,19 +50,19 @@
 	}
 
 	.menu-nav {
-		height: 75vh;
+		height: 60vh;
 		transform: translate3d(-100%, 0, 0);
 		font-size: 1.5rem;
 	}
 
 	.menu-branding {
-		height: 25vh;
+		height: 40vh;
 		transform: translate3d(100%, 0, 0);
 
 		.portrait {
-			background: url(img/portrait_small.jpg);
-			width: 9.375rem;
-			height: 9.375rem;
+			background: url(../img/portrait-small.jpg);
+			// width: 200px;
+			// height: 20px;
 		}
 	}
 
@@ -58,8 +72,11 @@
 			"bio"
 			"job1"
 			"job2"
-			"job3";
+			"job3"
+			"job4"
+			"job5";
 		grid-template-columns: 1fr;
+		text-align: left;
 	}
 
 	.projects {
@@ -79,7 +96,9 @@
 			"bio"
 			"job1"
 			"job2"
-			"job3";
+			"job3"
+			"job4"
+			"job5";
 		grid-template-columns: 1fr;
 	}
 

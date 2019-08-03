@@ -114,6 +114,14 @@ main {
 				outline: none;
 			}
 		}
+
+		p {
+			text-indent: 25px;
+		}
+	}
+
+	button.btn-download {
+		cursor: pointer;
 	}
 }
 
@@ -122,14 +130,14 @@ main {
 	grid-gap: 1.875rem;
 	grid-template-areas:
 		"bioimage bio bio"
-		"job1 job2 job3"
-		"job4 job5 job6";
+		"job1 job2 job2"
+		"job3 job4 job5";
 	grid-template-columns: repeat(3, 1fr);
 
 	.bio-image {
 		grid-area: bioimage;
 		margin: auto;
-		height: 100%;
+		width: 100%;
 		border-radius: 50%;
 		border: $secondary-color 0.25rem solid;
 	}
