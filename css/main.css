@@ -219,6 +219,20 @@ main {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr); }
+  .projects .item {
+    align-content: center;
+    align-items: center; }
+    .projects .item .photo-logo {
+      display: inline-block;
+      padding: 2rem;
+      width: 100%;
+      color: #ffa500;
+      margin: auto;
+      font-size: 8em;
+      text-align: center;
+      border: 0.25rem #fff solid; }
+    .projects .item .logo-photo {
+      padding: 2rem; }
   .projects img {
     width: 100%;
     border: 0.25rem #fff solid; }
