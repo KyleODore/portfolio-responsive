@@ -185,6 +185,26 @@ main {
 	grid-gap: 0.7rem;
 	grid-template-columns: repeat(3, 1fr);
 
+	.item {
+		align-content: center;
+		align-items: center;
+
+		.photo-logo {
+			display: inline-block;
+			padding: 2rem;
+			width: 100%;
+			color: #ffa500;
+			margin: auto;
+			font-size: 8em;
+			text-align: center;
+			border: 0.25rem setTextColor($primary-color) solid;
+		}
+
+		.logo-photo {
+			padding: 2rem;
+		}
+	}
+
 	img {
 		width: 100%;
 		border: 0.25rem setTextColor($primary-color) solid;
