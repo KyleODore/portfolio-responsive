@@ -71,3 +71,18 @@ function copyToClipboard(buttonId) {
 		}
 	);
 }
+
+// Sticky function
+// window.onscroll = function() {
+// 	stickyFunction();
+// };
+// var header = document.getElementsById("blog-photo");
+// var sticky = header.offsetTop;
+
+// function stickyFunction() {
+// 	if (window.pageYOffset > sticky) {
+// 		header.classList.add("sticky");
+// 	} else {
+// 		header.classList.remove("sticky");
+// 	}
+// }
