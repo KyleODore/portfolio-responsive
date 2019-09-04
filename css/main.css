@@ -293,7 +293,7 @@ main {
 #website-proj .blog-container {
   display: flex; }
   #website-proj .blog-container .blog-photo {
-    max-width: 40rem;
+    max-width: 30rem;
     display: inline-block;
     margin: 0 4rem 2rem 0;
     font-size: 8em;
@@ -305,6 +305,8 @@ main {
       color: #ffa500; }
     #website-proj .blog-container .blog-photo.tim-logo {
       padding: 2rem 4rem; }
+    #website-proj .blog-container .blog-photo.4u-logo {
+      padding: 4rem; }
   #website-proj .blog-container .blog-text {
     display: inline-block;
     margin: 0 auto 0 0;
