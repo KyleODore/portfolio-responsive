@@ -296,7 +296,7 @@ main {
 		display: flex;
 
 		.blog-photo {
-			max-width: 40rem;
+			max-width: 30rem;
 			display: inline-block;
 			margin: 0 4rem 2rem 0;
 			font-size: 8em;
@@ -311,6 +311,10 @@ main {
 
 			&.tim-logo {
 				padding: 2rem 4rem;
+			}
+
+			&.4u-logo {
+				padding: 4rem;
 			}
 		}
 
