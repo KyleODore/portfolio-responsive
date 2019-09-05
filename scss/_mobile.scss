@@ -10,6 +10,16 @@
 	.projects {
 		grid-template-columns: repeat(3, 1fr);
 	}
+
+	#website-proj {
+		img {
+		}
+
+		p {
+			display: flex;
+			min-width: 400px;
+		}
+	}
 }
 
 // Tablets & Small Laptops
@@ -103,5 +113,11 @@
 
 	.projects {
 		grid-template-columns: 1fr;
+	}
+
+	#website-proj {
+		img {
+			width: 100%;
+		}
 	}
 }
