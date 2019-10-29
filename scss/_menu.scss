@@ -5,12 +5,15 @@
 	right: 1.5rem;
 	top: 1.5rem;
 	cursor: pointer;
+	background-color: darken(setTextColor($primary-color), 80);
+	opacity: 0.8;
+	padding: 0 4px;
 	@include easeOut;
 
 	.btn-line {
 		width: 1.75rem;
 		height: 0.25rem;
-		margin: 0 0 5px 0;
+		margin: 5px 0 5px 0;
 		background: setTextColor($primary-color);
 		@include easeOut;
 	}
@@ -22,7 +25,7 @@
 		.btn-line {
 			// Line 1 - Rotate
 			&:nth-child(1) {
-				transform: rotate(45deg) translate(0.3rem, 0.3rem);
+				transform: rotate(45deg) translate(0.42rem, 0.42rem);
 			}
 
 			// Line 2 - Hide
@@ -32,7 +35,7 @@
 
 			// Line 3 - Rotate
 			&:nth-child(3) {
-				transform: rotate(-45deg) translate(8px, -8px);
+				transform: rotate(-45deg) translate(6px, -6px);
 			}
 		}
 	}

@@ -12,9 +12,6 @@
 	}
 
 	#website-proj {
-		img {
-		}
-
 		p {
 			display: flex;
 			min-width: 400px;
@@ -25,6 +22,7 @@
 // Tablets & Small Laptops
 @include mediaMd {
 	main {
+		padding: 2rem;
 		align-items: center;
 
 		.lg-heading {
@@ -59,13 +57,14 @@
 	}
 
 	.menu-nav {
-		height: 60vh;
+		height: 56vh;
 		transform: translate3d(-100%, 0, 0);
 		font-size: 1.5rem;
 	}
 
 	.menu-branding {
-		height: 40vh;
+		height: 44vh;
+		padding: 2vh;
 		transform: translate3d(100%, 0, 0);
 
 		.portrait {
@@ -76,16 +75,24 @@
 	}
 
 	.about-info {
-		grid-template-areas:
+		text-align: left;
+
+		.bio-grid {
+			grid-template-areas:
 			"bioimage"
-			"bio"
+			"bio";
+			grid-template-columns: 1fr;
+		}
+
+		.jobs {
+			grid-template-areas:
 			"job1"
 			"job2"
 			"job3"
 			"job4"
 			"job5";
-		grid-template-columns: 1fr;
-		text-align: left;
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.projects {

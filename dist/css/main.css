@@ -4,21 +4,24 @@
   right: 1.5rem;
   top: 1.5rem;
   cursor: pointer;
+  background-color: #333333;
+  opacity: 0.8;
+  padding: 0 4px;
   transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
     width: 1.75rem;
     height: 0.25rem;
-    margin: 0 0 5px 0;
+    margin: 5px 0 5px 0;
     background: #fff;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
-      transform: rotate(45deg) translate(0.3rem, 0.3rem); }
+      transform: rotate(45deg) translate(0.42rem, 0.42rem); }
     .menu-btn.close .btn-line:nth-child(2) {
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
-      transform: rotate(-45deg) translate(8px, -8px); }
+      transform: rotate(-45deg) translate(6px, -6px); }
 
 .menu {
   position: fixed;
@@ -187,34 +190,41 @@ main {
     cursor: pointer;
     transition: all 0.5s ease-out; }
 
-.about-info {
+.about-info .bio-grid {
   display: grid;
   grid-gap: 1.875rem;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job2" "job3 job4 job5";
-  grid-template-columns: repeat(3, 1fr); }
-  .about-info .bio-image {
+  grid-template-areas: "bioimage bio bio";
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 3rem; }
+  .about-info .bio-grid .bio-image {
     grid-area: bioimage;
     margin: auto;
     width: 100%;
     border-radius: 50%;
     border: #b7a57a 0.25rem solid; }
-  .about-info .bio {
+  .about-info .bio-grid .bio {
     grid-area: bio;
     font-size: 1.5rem; }
-  .about-info .job-1 {
+
+.about-info .jobs {
+  display: grid;
+  grid-gap: 1.875rem;
+  grid-template-areas: "job1 job2" "job3 job4";
+  grid-template-columns: repeat(2, 1fr); }
+  .about-info .jobs .job-1 {
     grid-area: job1; }
-  .about-info .job-2 {
+  .about-info .jobs .job-2 {
     grid-area: job2; }
-  .about-info .job-3 {
+  .about-info .jobs .job-3 {
     grid-area: job3; }
-  .about-info .job-4 {
+  .about-info .jobs .job-4 {
     grid-area: job4; }
-  .about-info .job {
+  .about-info .jobs .job {
     background: #404040;
     padding: 0.5rem;
     border-bottom: #b7a57a 0.3rem solid;
     overflow: hidden; }
-    .about-info .job h6 {
+    .about-info .jobs .job h6 {
       font-size: 0.9rem;
       font-weight: 300;
       margin: 0.2rem auto; }
@@ -225,11 +235,13 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .projects .item {
     align-content: center;
-    align-items: center; }
+    align-items: center;
+    min-height: 3rem; }
     .projects .item .photo-logo {
       display: inline-block;
       padding: 2rem;
       width: 100%;
+      min-height: 2rem;
       color: #ffa500;
       margin: auto;
       font-size: 8em;
@@ -237,9 +249,12 @@ main {
       border: 0.25rem #fff solid; }
     .projects .item .logo-photo {
       padding: 2rem; }
+  .projects a {
+    margin: auto; }
   .projects img {
     width: 100%;
-    border: 0.25rem #fff solid; }
+    border: 0.25rem #fff solid;
+    margin: auto; }
     .projects img:hover {
       opacity: 0.5;
       border-color: #b7a57a;
@@ -254,7 +269,7 @@ main {
   #contact .boxes div {
     font-size: 2rem;
     border: 0.25rem #fff solid;
-    padding: 1.5rem 2.5rem;
+    padding: 1.5rem 0.5rem;
     margin-bottom: 3rem;
     transition: all 0.5s ease-out; }
     #contact .boxes div:hover {
@@ -357,6 +372,7 @@ main {
 
 @media screen and (max-width: 768px) {
   main {
+    padding: 2rem;
     align-items: center; }
     main .lg-heading {
       line-height: 1;
@@ -376,18 +392,23 @@ main {
     div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
   .menu-nav {
-    height: 60vh;
+    height: 56vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 1.5rem; }
   .menu-branding {
-    height: 40vh;
+    height: 44vh;
+    padding: 2vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
       background: url(../img/portrait-small.jpg); }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "job4" "job5";
-    grid-template-columns: 1fr;
     text-align: left; }
+    .about-info .bio-grid {
+      grid-template-areas: "bioimage" "bio";
+      grid-template-columns: 1fr; }
+    .about-info .jobs {
+      grid-template-areas: "job1" "job2" "job3" "job4" "job5";
+      grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 

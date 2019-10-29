@@ -132,53 +132,63 @@ main {
 }
 
 .about-info {
-	display: grid;
-	grid-gap: 1.875rem;
-	grid-template-areas:
-		"bioimage bio bio"
-		"job1 job2 job2"
-		"job3 job4 job5";
-	grid-template-columns: repeat(3, 1fr);
+	.bio-grid {
+		display: grid;
+		grid-gap: 1.875rem;
+		grid-template-areas:
+			"bioimage bio bio";
+		grid-template-columns: repeat(3, 1fr);
+		margin-bottom: 3rem;
 
-	.bio-image {
-		grid-area: bioimage;
-		margin: auto;
-		width: 100%;
-		border-radius: 50%;
-		border: $secondary-color 0.25rem solid;
+		.bio-image {
+			grid-area: bioimage;
+			margin: auto;
+			width: 100%;
+			border-radius: 50%;
+			border: $secondary-color 0.25rem solid;
+		}
+
+		.bio {
+			grid-area: bio;
+			font-size: 1.5rem;
+		}
 	}
 
-	.bio {
-		grid-area: bio;
-		font-size: 1.5rem;
-	}
+	.jobs {
+		display: grid;
+		grid-gap: 1.875rem;
+		grid-template-areas:
+		"job1 job2"
+		"job3 job4";
+		grid-template-columns: repeat(2, 1fr);
 
-	.job-1 {
-		grid-area: job1;
-	}
+		.job-1 {
+			grid-area: job1;
+		}
+	
+		.job-2 {
+			grid-area: job2;
+		}
+	
+		.job-3 {
+			grid-area: job3;
+		}
+	
+		.job-4 {
+			grid-area: job4;
+		}
 
-	.job-2 {
-		grid-area: job2;
-	}
-
-	.job-3 {
-		grid-area: job3;
-	}
-
-	.job-4 {
-		grid-area: job4;
-	}
-
-	.job {
-		background: lighten($color: $primary-color, $amount: 5);
-		padding: 0.5rem;
-		border-bottom: $secondary-color 0.3rem solid;
-		overflow: hidden;
-
-		h6 {
-			font-size: 0.9rem;
-			font-weight: 300;
-			margin: 0.2rem auto;
+		.job {
+			background: lighten($color: $primary-color, $amount: 5);
+			padding: 0.5rem;
+			border-bottom: $secondary-color 0.3rem solid;
+			overflow: hidden;
+	
+			h6 {
+				font-size: 0.9rem;
+				font-weight: 300;
+				margin: 0.2rem auto;
+			}
 		}
 	}
 }
@@ -192,11 +202,13 @@ main {
 	.item {
 		align-content: center;
 		align-items: center;
+		min-height: 3rem;
 
 		.photo-logo {
 			display: inline-block;
 			padding: 2rem;
 			width: 100%;
+			min-height: 2rem;
 			color: #ffa500;
 			margin: auto;
 			font-size: 8em;
@@ -209,9 +221,14 @@ main {
 		}
 	}
 
+	a {
+		margin: auto;
+	}
+
 	img {
 		width: 100%;
 		border: 0.25rem setTextColor($primary-color) solid;
+		margin: auto;
 
 		&:hover {
 			opacity: 0.5;
@@ -233,7 +250,7 @@ main {
 		div {
 			font-size: 2rem;
 			border: 0.25rem setTextColor($primary-color) solid;
-			padding: 1.5rem 2.5rem;
+			padding: 1.5rem 0.5rem;
 			margin-bottom: 3rem;
 
 			@include easeOut;
