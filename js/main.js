@@ -58,7 +58,7 @@ function copyToClipboard(buttonId) {
 			copyH3.innerText = "Copied: " + copyObj[buttonId];
 			setTimeout(function() {
 				copyItem.classList.add("hidden");
-			}, 1000);
+			}, 700);
 		},
 		function() {
 			/* clipboard write failed */
@@ -67,7 +67,7 @@ function copyToClipboard(buttonId) {
 			copyH3.innerText = "Couldn't copy the text. Please try again";
 			setTimeout(function() {
 				copyItem.classList.add("hidden");
-			}, 1500);
+			}, 800);
 		}
 	);
 }
