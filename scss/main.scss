@@ -221,10 +221,6 @@ main {
 		}
 	}
 
-	a {
-		margin: auto;
-	}
-
 	img {
 		width: 100%;
 		border: 0.25rem setTextColor($primary-color) solid;
@@ -321,7 +317,8 @@ main {
 			border: 0.25rem setTextColor($primary-color) solid;
 			float: left;
 
-			&.fab {
+			&.fab,
+			&.fas {
 				padding: 4rem 6rem;
 				color: #ffa500;
 				border: none;

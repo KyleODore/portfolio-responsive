@@ -249,8 +249,6 @@ main {
       border: 0.25rem #fff solid; }
     .projects .item .logo-photo {
       padding: 2rem; }
-  .projects a {
-    margin: auto; }
   .projects img {
     width: 100%;
     border: 0.25rem #fff solid;
@@ -315,7 +313,7 @@ main {
     text-align: center;
     border: 0.25rem #fff solid;
     float: left; }
-    #website-proj .blog-container .blog-photo.fab {
+    #website-proj .blog-container .blog-photo.fab, #website-proj .blog-container .blog-photo.fas {
       padding: 4rem 6rem;
       color: #ffa500;
       border: none; }
