@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="Description"
+			content="Kyle O'Dore's work on his own personal website."
+		/>
+		<title>My Work: This Website</title>
+
+		<link rel="icon" href="../img/favicon.png" type="image/png" />
+		<link rel="shortcut icon" href="../img/favicon.ico" />
+
+		<link rel="stylesheet" href="../css/main.css" />
+		<script src="https://kit.fontawesome.com/66901808bd.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="menu-btn">
+				<div class="btn-line"></div>
+				<div class="btn-line"></div>
+				<div class="btn-line"></div>
+			</div>
+
+			<nav class="menu">
+				<div class="menu-branding">
+					<div class="portrait"></div>
+				</div>
+				<ul class="menu-nav">
+					<li class="nav-item">
+						<a href="../index.html" class="nav-link">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="../about.html" class="nav-link">About Me</a>
+					</li>
+					<li class="nav-item current">
+						<a href="../work.html" class="nav-link">My Work</a>
+					</li>
+					<li class="nav-item">
+						<a href="../contact.html" class="nav-link">Reach Me</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="website-proj">
+			<h1 class="lg-heading">
+				<a href="../work.html" class="nav-link"
+					>My&nbsp;<span class="text-secondary">Work</span></a
+				>
+			</h1>
+			<h2 class="sm-heading">
+				The Durn Bus Away App:
+			</h2>
+			<div class="blog-container">
+				<div class="blog-text">
+					<i class="fas fa-bus blog-photo"></i>
+					<p>
+						The name for this project comes from the name for the One Bus Away Application
+						provided by the Open Transit Software Foundation and the nearby Durn Good Grocery Store.
+						Living right by the bus stop to be able to get to campus means that theres even more incentive
+						to not get to the stop early and spend as much time in the dry and warm confines of my house.
+						This means I'll end up on the couch passing the time on my phone, but the problem is I have to
+						open the OneBusAway app to be able to check the times, but I can forget to check it and miss the bus.
+					</p>
+					<p>
+						This spawned the idea of using a Raspberry Pi and a GPIO screen I found for cheap with an included
+						case to display up-to-date information on the bus stop going towards campus, so I could quickly see
+						the incoming busses while not having to open an app and wait for the stop info to load again.
+					</p>
+					<p>
+						I hadn't used electron before to build an application and so I wanted to attempt to use it to develop
+						the app. It was a fun experience especially now that I have to learn how to configure and publish the
+						app so that I can use it on the device. I am pretty happy with the simple design for the app and will
+						probably not change it as adding complexity for a tiny screen will not help it's visibility.
+					</p>
+					<p>
+						I also have not tested the app on the Raspberry Pi's (Model 2 model B?) hardware so I have no idea how
+						it will perform, but I somewhat hope that it won't be optimized, so that I can have a chance to mess
+						with performance. I will probably try to do so anyway, but we will see once I publish the app and try
+						to run it on the Pi.
+					</p>
+				</div>
+			</div>
+		</main>
+
+		<footer id="main-footer">
+			Copyright &copy; 2019
+		</footer>
+
+		<script src="../js/main.js"></script>
+	</body>
+</html>
