@@ -206,6 +206,9 @@ main {
     grid-area: bio;
     font-size: 1.5rem; }
 
+.about-info .text-secondary {
+  font-size: 2rem; }
+
 .about-info .jobs {
   display: grid;
   grid-gap: 1.875rem;
@@ -236,7 +239,8 @@ main {
   .projects .item {
     align-content: center;
     align-items: center;
-    min-height: 3rem; }
+    min-height: 3rem;
+    height: 100%; }
     .projects .item .photo-logo {
       display: inline-block;
       padding: 2rem;

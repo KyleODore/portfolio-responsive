@@ -154,6 +154,10 @@ main {
 		}
 	}
 
+	.text-secondary {
+		font-size: 2rem;
+	}
+
 	.jobs {
 		display: grid;
 		grid-gap: 1.875rem;
@@ -203,6 +207,7 @@ main {
 		align-content: center;
 		align-items: center;
 		min-height: 3rem;
+		height: 100%;
 
 		.photo-logo {
 			display: inline-block;
