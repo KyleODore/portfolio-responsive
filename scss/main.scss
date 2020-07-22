@@ -119,10 +119,6 @@ main {
 				outline: none;
 			}
 		}
-
-		p {
-			text-indent: 25px;
-		}
 	}
 
 	button.btn-download {
@@ -204,6 +200,8 @@ main {
 	grid-template-columns: repeat(3, 1fr);
 
 	.item {
+		//display: grid;
+		//grid-template-rows: auto;
 		align-content: center;
 		align-items: center;
 		min-height: 3rem;

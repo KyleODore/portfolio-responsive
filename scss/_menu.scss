@@ -21,7 +21,7 @@
 	// Rotate into X with menu lines
 	&.close {
 		transform: rotate(180deg);
-
+		background-color: darken($color: $primary-color, $amount: 5);
 		.btn-line {
 			// Line 1 - Rotate
 			&:nth-child(1) {
