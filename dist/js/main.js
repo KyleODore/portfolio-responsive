@@ -45,7 +45,7 @@ function copyToClipboard(buttonId) {
 	const copyObj = {
 		email: "kyleodore@gmail.com",
 		phoneNumber: "+1 (206) 434-9661",
-		address: "1812 N 40TH ST, APT B, SEATTLE WA 98103-8352"
+		address: ""
 	};
 
 	const copyDiv = document.getElementById("copy-popup");
