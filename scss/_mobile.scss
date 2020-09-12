@@ -3,6 +3,11 @@
 	.projects {
 		grid-template-columns: repeat(4, 1fr);
 	}
+	.blog-photo {
+		&.diagram {
+			max-width: 50% !important;
+		}
+	}
 }
 
 // Desktops and Laptops
@@ -16,6 +21,12 @@
 			display: flex;
 			min-width: 400px;
 		}
+
+		.blog-photo {
+			&.diagram {
+				max-width: 100%;
+			}
+		}
 	}
 }
 
@@ -26,6 +37,7 @@
 		align-items: center;
 
 		.lg-heading {
+			font-size: 3rem;
 			line-height: 1;
 			margin-bottom: 1rem;
 			display: block;
@@ -97,6 +109,14 @@
 
 	.projects {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	#website-proj {
+		.blog-photo {
+			&.diagram {
+				max-width: 100%;
+			}
+		}
 	}
 }
 

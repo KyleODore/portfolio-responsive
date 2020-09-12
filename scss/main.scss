@@ -325,7 +325,7 @@ main {
 		display: flex;
 
 		.blog-photo {
-			max-width: 30rem;
+			max-width: 50rem;
 			display: inline-block;
 			margin: 0 4rem 2rem 0;
 			font-size: 8em;
@@ -347,6 +347,10 @@ main {
 
 			&.for-u-logo {
 				border: none;
+			}
+
+			&.diagram {
+				background: setTextColor($primary-color);
 			}
 		}
 

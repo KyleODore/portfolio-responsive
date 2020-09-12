@@ -320,7 +320,7 @@ main {
 #website-proj .blog-container {
   display: flex; }
   #website-proj .blog-container .blog-photo {
-    max-width: 30rem;
+    max-width: 50rem;
     display: inline-block;
     margin: 0 4rem 2rem 0;
     font-size: 8em;
@@ -336,6 +336,8 @@ main {
       border: none; }
     #website-proj .blog-container .blog-photo.for-u-logo {
       border: none; }
+    #website-proj .blog-container .blog-photo.diagram {
+      background: #fff; }
   #website-proj .blog-container .blog-text {
     display: inline-block;
     margin: 0 auto 0 0;
@@ -373,20 +375,25 @@ main {
 
 @media screen and (min-width: 1071px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .blog-photo.diagram {
+    max-width: 50% !important; } }
 
 @media screen and (min-width: 769px) and (max-width: 1070px) {
   .projects {
     grid-template-columns: repeat(3, 1fr); }
   #website-proj p {
     display: flex;
-    min-width: 400px; } }
+    min-width: 400px; }
+  #website-proj .blog-photo.diagram {
+    max-width: 100%; } }
 
 @media screen and (max-width: 768px) {
   main {
     padding: 2rem;
     align-items: center; }
     main .lg-heading {
+      font-size: 3rem;
       line-height: 1;
       margin-bottom: 1rem;
       display: block; }
@@ -422,7 +429,9 @@ main {
       grid-template-areas: "job1" "job2" "job3" "job4" "job5";
       grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  #website-proj .blog-photo.diagram {
+    max-width: 100%; } }
 
 @media screen and (min-width: 400px) and (max-width: 500px) {
   main#home h1 {
