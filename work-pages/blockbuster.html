@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="Description"
+			content="Kyle O'Dore's work on his own personal website."
+		/>
+		<title>My Work: Blockbuster</title>
+
+		<link rel="icon" href="../img/favicon.png" type="image/png" />
+		<link rel="shortcut icon" href="../img/favicon.ico" />
+
+		<link rel="stylesheet" href="../css/main.css" />
+		<script src="https://kit.fontawesome.com/66901808bd.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="menu-btn">
+				<div class="btn-line"></div>
+				<div class="btn-line"></div>
+				<div class="btn-line"></div>
+			</div>
+
+			<nav class="menu">
+				<div class="menu-branding">
+					<div class="portrait"></div>
+				</div>
+				<ul class="menu-nav">
+					<li class="nav-item">
+						<a href="../index.html" class="nav-link">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="../about.html" class="nav-link">About Me</a>
+					</li>
+					<li class="nav-item current">
+						<a href="../work.html" class="nav-link">My Work</a>
+					</li>
+					<li class="nav-item">
+						<a href="../contact.html" class="nav-link">Reach Me</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="website-proj">
+			<h1 class="lg-heading">
+				<a href="../work.html" class="nav-link"
+					>My&nbsp;<span class="text-secondary">Work</span></a
+				>
+			</h1>
+			<h2 class="sm-heading">
+				Blockbuster:
+			</h2>
+			<div class="blog-container">
+				<div class="blog-text">
+					<img
+						class="blog-photo diagram"
+						src="../img/projects/343 Program 4 UML.png"
+						alt="UML Diagram for the blockbuster project"
+					/>
+					<p>
+						This project was one that I did as a part of CSS 343 (Data Structures, Algorithms
+						and Discrete Math) at UWB. The final assignment was one where we needed to design
+						a piece of software from the ground up with only the information from the 
+						specification regarding formatting of the inputs and outputs and what the system
+						should be able to do. The program that we needed to build was a sort of transaction-
+						based emulator of a movie rental business, hence the name I gave it, "Blockbuster."
+					</p>
+					<p>
+						This application takes in a number of formatted text files such as 
+						a customer list, movie list, and a transaction list to simulate the operations of a
+						movie rental business. It will then store all the information it needs and run 
+						through the transactions until the program completes. 
+					</p>
+					<p>
+						We were required to create the design for the program in groups with other people.
+						This was an interesting experience that I hadn't had in any of my internships as
+						I was starting from step 0 in designing a product and so I ran into points where
+						I disagreed with the way that other people in the group wanted to implement things.
+						An example of this was with the implementation of the factory method and how the
+						classes should be structured to accomodate this specific method. Some of my group
+						members wanted to have the factory be a separate class, while I throught it would
+						work best as a function within the class that would call it. I explained that having
+						it as a function would be more efficient as it would reduce the need to import other
+						classes again and deal with other items being out of scope.
+					</p>
+					<p>
+						We then had to use UML to present our design for the application and write the 
+						header files for all the classes we intended on creating. This was so that we
+						could meet the needs for implementing various types of inheritance such as multiple
+						and heirarchical inheritance as well as to use the factory method when creating classes.
+						The final part was that we were required to design and implement custom binary search trees
+						and hashtables to store the movies and customers.
+					</p>
+				</div>
+			</div>
+		</main>
+
+		<footer id="main-footer">
+			Copyright &copy; 2020
+		</footer>
+
+		<script src="../js/main.js"></script>
+	</body>
+</html>

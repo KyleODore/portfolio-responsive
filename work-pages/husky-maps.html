@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="Description"
+			content="Kyle O'Dore's work on his own personal website."
+		/>
+		<title>My Work: Husky Maps</title>
+
+		<link rel="icon" href="../img/favicon.png" type="image/png" />
+		<link rel="shortcut icon" href="../img/favicon.ico" />
+
+		<link rel="stylesheet" href="../css/main.css" />
+		<script src="https://kit.fontawesome.com/66901808bd.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="menu-btn">
+				<div class="btn-line"></div>
+				<div class="btn-line"></div>
+				<div class="btn-line"></div>
+			</div>
+
+			<nav class="menu">
+				<div class="menu-branding">
+					<div class="portrait"></div>
+				</div>
+				<ul class="menu-nav">
+					<li class="nav-item">
+						<a href="../index.html" class="nav-link">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="../about.html" class="nav-link">About Me</a>
+					</li>
+					<li class="nav-item current">
+						<a href="../work.html" class="nav-link">My Work</a>
+					</li>
+					<li class="nav-item">
+						<a href="../contact.html" class="nav-link">Reach Me</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="website-proj">
+			<h1 class="lg-heading">
+				<a href="../work.html" class="nav-link"
+					>My&nbsp;<span class="text-secondary">Work</span></a
+				>
+			</h1>
+			<h2 class="sm-heading">
+				This Website:
+			</h2>
+			<div class="blog-container">
+				<div class="blog-text">
+					<img
+						class="blog-photo"
+						src="../img/projects/autocomplete.png"
+						alt="A screenshot of the autocomplete in action"
+					/>
+					<p>
+						This application was a part of CSE 373, a non-majors data structures and algorithms class
+						that I took while I was an Applied Physics major at UW Seattle. The homework for the class
+						all built up over time as we learned more data structures and algorithms. The goal of thge
+						program was to build a sort of clone of a Google Maps type application. The first major
+						application in the homework that we worked on was an autocomplete for the location search
+						portion of the application. We used arrays and a binary range search to grab items that 
+						were most similar to the user's search that we had stored in the application.
+					</p>
+					<p>
+						THe implementation wasn't that difficult, but the most impressive part for me was seeing the
+						algorithm at work once I had gotten it working right. It was amazing to think how a simple
+						concept such as binary searches can be applied to generate functions that seem much more
+						complex. It was very humbling but also taught me the power of the algorithms and the concepts
+						that allow them to function as well and as fast as they do.
+					</p>
+					<img
+						class="blog-photo"
+						src="../img/projects/husky maps.png"
+						alt="Sample of husky maps UI"
+					/>
+					<p>
+						The next major step was the pathfinding for navigation. Finding the quickest path between two points.
+						At this point we had already implemented a way to find the closest point to another point, so if a
+						user were to click in empty space, the application would choose the closest landmark that the
+						application has stored as an end point. We had also implemented a k-d tree to store the nodes on
+						the map. Combining what I had previously implemented with the A* Search algorithm I could then 
+						implement a way to find the shortest path between two nodes and provide that to the application so
+						that a user could see the path drawn on the map.
+					</p>
+					<p>
+						This step was the largest and pulled in a lot of the other features that had been developed previously.
+						I learned from this step how, as previously mentioned, small and "simple" things can all be developed
+						together and built up into something complex. To date this was the best project that I had worked on
+						as I had a lot of fun throughout the entire project, and I also learned a massive amount throughout
+						the process.
+					</p>
+				</div>
+			</div>
+		</main>
+
+		<footer id="main-footer">
+			Copyright &copy; 2020
+		</footer>
+
+		<script src="../js/main.js"></script>
+	</body>
+</html>
