@@ -1,6 +1,6 @@
 {
 	"name": "portfolio-responsive",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Responsive personal portfolio",
 	"main": "index.js",
 	"homepage": "https://kyleodore.dev",
@@ -12,7 +12,7 @@
 	"author": "Kyle Tomlin O'Dore",
 	"license": "MIT",
 	"dependencies": {
-		"gh-pages": "^2.0.1",
-		"node-sass": "^4.12.0"
+		"gh-pages": ">=2.0.1",
+		"node-sass": ">=4.12.0"
 	}
 }
