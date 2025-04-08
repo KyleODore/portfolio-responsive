@@ -109,6 +109,33 @@
 
 	.projects {
 		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1rem;
+		
+		.item {
+			.image {
+				padding: 0.75rem;
+			}
+			
+			.photo-logo {
+				font-size: 5em;
+				padding: 1.5rem;
+			}
+			
+			.links {
+				flex-direction: column;
+				padding: 0.75rem;
+				
+				a {
+					width: 100%;
+					margin-bottom: 0.5rem;
+				}
+			}
+		}
+	}
+
+	.btn {
+		font-size: 0.9rem;
+		padding: 0.5rem 1rem;
 	}
 
 	#website-proj {
@@ -140,6 +167,21 @@
 
 	.projects {
 		grid-template-columns: 1fr;
+		
+		.item {
+			margin-bottom: 1rem;
+			
+			.photo-logo {
+				font-size: 4em;
+				padding: 1rem;
+			}
+		}
+	}
+
+	.btn {
+		display: block;
+		width: 100%;
+		margin-bottom: 0.5rem;
 	}
 
 	#website-proj {

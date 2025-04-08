@@ -1,0 +1,220 @@
+// Material Design inspired project cards
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  z-index: 1;  // Set base z-index for projects section
+
+  .item {
+    position: relative;
+    background: darken($primary-color, 2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.15s ease;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $secondary-color;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      pointer-events: none;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0.1;
+      }
+    }
+
+    a {
+      position: relative;
+      display: block;
+      height: 250px;
+      background: darken($primary-color, 2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+      text-decoration: none;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .photo-logo {
+        font-size: 8.5em;
+        color: $secondary-color;
+      }
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      padding: 0.2rem 0;
+      gap: 0.2rem;
+      background: linear-gradient(
+        to bottom,
+        darken($primary-color, 2) 0%,
+        darken($primary-color, 4) 100%
+      );
+
+      a {
+        height: auto;
+        padding: 0.3rem;
+        text-align: center;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        height: 2rem;
+        color: #fff;
+        background: lighten($primary-color, 5);
+        width: auto;
+        margin: 0 1.5rem;
+        border-radius: 3px;
+        transition: background 0.15s ease;
+        position: relative;
+
+        &.btn-light {
+          background: lighten($primary-color, 5);
+        }
+
+        &:last-child {
+          background: #000;
+          margin-bottom: 0.3rem;
+        }
+
+        &:only-child {
+          background: lighten($primary-color, 5);
+          margin-bottom: 0.3rem;
+        }
+        
+        i {
+          margin-right: 0.3rem;
+          color: #fff;
+        }
+
+        &:hover {
+          background: $secondary-color;
+        }
+      }
+    }
+
+    .item-text {
+      padding: 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        margin-bottom: 0.5rem;
+        color: $secondary-color;
+      }
+
+      p {
+        margin-bottom: 0.5rem;
+      }
+
+      ul {
+        margin: 0.5rem 0;
+        padding-left: 1rem;
+      }
+
+      li {
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// Responsive adjustments for projects
+@include mediaXL {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include mediaMd {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    
+    .item {
+      a {
+        height: 220px;
+        padding: 1.2rem;
+
+        .photo-logo {
+          font-size: 7em;
+        }
+      }
+      
+      .links {
+        padding: 0.2rem 0;
+        gap: 0.2rem;
+
+        a {
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}
+
+@include mediaSm {
+  .projects {
+    grid-template-columns: 1fr;
+    
+    .item {
+      margin-bottom: 0.7rem;
+      
+      a {
+        height: 200px;
+        padding: 1rem;
+
+        .photo-logo {
+          font-size: 6em;
+        }
+      }
+      
+      .links {
+        padding: 0.2rem 0;
+        gap: 0.2rem;
+
+        a {
+          margin: 0 0.75rem;
+        }
+      }
+    }
+  }
+}
