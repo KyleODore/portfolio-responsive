@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $primary-color: #333;
 $secondary-color: #b7a57a;
 
@@ -8,7 +10,7 @@ $secondary-color: #b7a57a;
 // Set text color
 
 @function setTextColor($color) {
-	@if (lightness($color) > 40) {
+	@if (color.channel($color, "lightness", $space: hsl) > 40) {
 		@return #000;
 	} @else {
 		@return #fff;

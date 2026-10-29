@@ -1,5 +1,8 @@
+@use "sass:color";
+@use "config" as *;
+
 // Material Design inspired buttons
-.btn {
+.btn, .btn-light, .btn-dark {
   display: inline-block;
   padding: 0.6rem 1.2rem;
   border: 0;
@@ -33,14 +36,12 @@
 }
 
 .btn-dark {
-  @extend .btn;
-  background: darken($color: $primary-color, $amount: 35);
+  background: color.change($primary-color, $lightness: max(0%, color.channel($primary-color, "lightness", $space: hsl) - 35%), $space: hsl);
   color: #fff;
 }
 
 .btn-light {
-  @extend .btn;
-  background: lighten($color: $primary-color, $amount: 50);
+  background: color.adjust($primary-color, $lightness: 50%);
   color: #333;
 }
 
@@ -58,14 +59,14 @@
 
 // Responsive adjustments
 @include mediaMd {
-  .btn {
+  .btn, .btn-dark, .btn-light {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
 }
 
 @include mediaSm {
-  .btn {
+  .btn, .btn-dark, .btn-light {
     display: block;
     width: 100%;
     margin-bottom: 0.5rem;
