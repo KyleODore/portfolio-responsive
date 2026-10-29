@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "config" as *;
+
 // Material Design inspired project cards
 .projects {
   display: grid;
@@ -8,7 +11,7 @@
 
   .item {
     position: relative;
-    background: darken($primary-color, 2);
+    background: color.adjust($primary-color, $lightness: -2%);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -39,7 +42,7 @@
       position: relative;
       display: block;
       height: 250px;
-      background: darken($primary-color, 2);
+      background: color.adjust($primary-color, $lightness: -2%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -67,8 +70,8 @@
       gap: 0.2rem;
       background: linear-gradient(
         to bottom,
-        darken($primary-color, 2) 0%,
-        darken($primary-color, 4) 100%
+        color.adjust($primary-color, $lightness: -2%) 0%,
+        color.adjust($primary-color, $lightness: -4%) 100%
       );
 
       a {
@@ -82,7 +85,7 @@
         font-size: 0.85rem;
         height: 2rem;
         color: #fff;
-        background: lighten($primary-color, 5);
+        background: color.adjust($primary-color, $lightness: 5%);
         width: auto;
         margin: 0 1.5rem;
         border-radius: 3px;
@@ -90,7 +93,7 @@
         position: relative;
 
         &.btn-light {
-          background: lighten($primary-color, 5);
+          background: color.adjust($primary-color, $lightness: 5%);
         }
 
         &:last-child {
@@ -99,7 +102,7 @@
         }
 
         &:only-child {
-          background: lighten($primary-color, 5);
+          background: color.adjust($primary-color, $lightness: 5%);
           margin-bottom: 0.3rem;
         }
         
