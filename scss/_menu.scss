@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "config" as *;
+
 // Menu Button
 .menu-btn {
 	position: absolute;
@@ -5,12 +8,19 @@
 	right: 1.5rem;
 	top: 1.5rem;
 	cursor: pointer;
-	background-color: darken(setTextColor($primary-color), 80);
+	border: 0;
+	background-color: color.adjust(setTextColor($primary-color), $lightness: -80%);
 	opacity: 0.8;
 	padding: 0 4px;
 	@include easeOut;
 
+	&:focus-visible {
+		outline: 2px solid $secondary-color;
+		outline-offset: 4px;
+	}
+
 	.btn-line {
+		display: block;
 		width: 1.75rem;
 		height: 0.25rem;
 		margin: 5px 0 5px 0;
@@ -21,7 +31,7 @@
 	// Rotate into X with menu lines
 	&.close {
 		transform: rotate(180deg);
-		background-color: darken($color: $primary-color, $amount: 5);
+		background-color: color.adjust($primary-color, $lightness: -5%);
 		.btn-line {
 			// Line 1 - Rotate
 			&:nth-child(1) {
@@ -69,7 +79,7 @@
 	&-nav {
 		margin: 0;
 		padding: 0;
-		background: darken($color: $primary-color, $amount: 5);
+		background: color.adjust($primary-color, $lightness: -5%);
 		list-style: none;
 		transform: translate3d(0, -100%, 0);
 		@include easeOut;
@@ -82,7 +92,7 @@
 
 	// Branding side
 	&-branding {
-		background: lighten($color: $primary-color, $amount: 5);
+		background: color.adjust($primary-color, $lightness: 5%);
 		@include easeOut;
 		transform: translate3d(0, 100%, 0);
 

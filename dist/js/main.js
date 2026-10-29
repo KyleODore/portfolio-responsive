@@ -39,6 +39,8 @@ function toggleMenu() {
 		// Set menu state
 		showMenu = false;
 	}
+
+	menuBtn.setAttribute("aria-expanded", showMenu.toString());
 }
 
 function copyToClipboard(buttonId) {
@@ -54,6 +56,7 @@ function copyToClipboard(buttonId) {
 	navigator.clipboard.writeText(copyObj[buttonId]).then(
 		function() {
 			/* clipboard successfully set */
+			copyH3.classList.remove("failed");
 			copyItem.classList.remove("hidden");
 			copyH3.innerText = "Copied: " + copyObj[buttonId];
 			setTimeout(function() {
@@ -62,7 +65,7 @@ function copyToClipboard(buttonId) {
 		},
 		function() {
 			/* clipboard write failed */
-			copyItem.classList.add("failed");
+			copyH3.classList.add("failed");
 			copyItem.classList.remove("hidden");
 			copyH3.innerText = "Couldn't copy the text. Please try again";
 			setTimeout(function() {

@@ -16,19 +16,19 @@
 	<body bg-color-factor=>
 		<header>
 			<span class="bg-color-factor"></span>
-			<div class="menu-btn">
-				<div class="btn-line"></div>
-				<div class="btn-line"></div>
-				<div class="btn-line"></div>
-			</div>
+			<button class="menu-btn" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+				<span class="btn-line"></span>
+				<span class="btn-line"></span>
+				<span class="btn-line"></span>
+			</button>
 
-			<nav class="menu">
+			<nav class="menu" id="primary-navigation" aria-label="Primary">
 				<div class="menu-branding">
 					<div class="portrait"></div>
 				</div>
 				<ul class="menu-nav">
 					<li class="nav-item current">
-						<a href="index.html" class="nav-link current">Home</a>
+						<a href="index.html" class="nav-link current" aria-current="page">Home</a>
 					</li>
 					<li class="nav-item">
 						<a href="about.html" class="nav-link">About Me</a>
@@ -51,10 +51,10 @@
 				Software Engineer, Technology Enthusiast, Problem Solver
 			</h2>
 			<div class="icons">
-				<a href="https://www.linkedin.com/in/kodore/">
+				<a href="https://www.linkedin.com/in/kodore/" aria-label="LinkedIn">
 					<i class="fab fa-linkedin fa-2x" title="Linkedin"></i>
 				</a>
-				<a href="https://github.com/KyleODore/">
+				<a href="https://github.com/KyleODore/" aria-label="GitHub">
 					<i class="fab fa-github fa-2x" title="Github"></i>
 				</a>
 			</div>
@@ -63,6 +63,7 @@
 					method="get"
 					action="other/Kyle-ODore-RESUME-2025-PDF.pdf"
 					target="_blank"
+					rel="noopener noreferrer"
 				>
 					<button class="btn-light btn-download" type="submit">
 						<i class="fas fa-file-pdf"></i> View my resume
@@ -72,7 +73,7 @@
 		</main>
 
 		<footer id="main-footer">
-			Copyright &copy; 2025
+			Copyright &copy; 2026
 		</footer>
 
 		<script src="js/main.js"></script>

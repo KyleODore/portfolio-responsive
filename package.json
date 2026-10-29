@@ -6,6 +6,8 @@
 	"homepage": "https://kyleodore.dev",
 	"scripts": {
 		"sass": "sass --watch scss:dist/css",
+		"build": "sass --no-source-map scss:dist/css",
+		"test": "node --test tests/site.test.js",
 		"add-domain": "echo kyleodore.dev > ./dist/CNAME",
 		"deploy": "gh-pages -d dist"
 	},
