@@ -8,12 +8,19 @@
 	right: 1.5rem;
 	top: 1.5rem;
 	cursor: pointer;
+	border: 0;
 	background-color: color.adjust(setTextColor($primary-color), $lightness: -80%);
 	opacity: 0.8;
 	padding: 0 4px;
 	@include easeOut;
 
+	&:focus-visible {
+		outline: 2px solid $secondary-color;
+		outline-offset: 4px;
+	}
+
 	.btn-line {
+		display: block;
 		width: 1.75rem;
 		height: 0.25rem;
 		margin: 5px 0 5px 0;

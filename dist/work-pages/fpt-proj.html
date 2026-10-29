@@ -18,13 +18,13 @@
 	</head>
 	<body>
 		<header>
-			<div class="menu-btn">
-				<div class="btn-line"></div>
-				<div class="btn-line"></div>
-				<div class="btn-line"></div>
-			</div>
+			<button class="menu-btn" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+				<span class="btn-line"></span>
+				<span class="btn-line"></span>
+				<span class="btn-line"></span>
+			</button>
 
-			<nav class="menu">
+			<nav class="menu" id="primary-navigation" aria-label="Primary">
 				<div class="menu-branding">
 					<div class="portrait"></div>
 				</div>
@@ -36,7 +36,7 @@
 						<a href="../about.html" class="nav-link">About Me</a>
 					</li>
 					<li class="nav-item current">
-						<a href="../work.html" class="nav-link">My Work</a>
+						<a href="../work.html" class="nav-link" aria-current="page">My Work</a>
 					</li>
 					<li class="nav-item">
 						<a href="../contact.html" class="nav-link">Reach Me</a>
@@ -144,7 +144,7 @@
 		</main>
 
 		<footer id="main-footer">
-			Copyright &copy; 2024
+			Copyright &copy; 2026
 		</footer>
 
 		<script src="../js/main.js"></script>
