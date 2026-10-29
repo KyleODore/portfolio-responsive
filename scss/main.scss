@@ -1,7 +1,9 @@
-@import "config";
-@import "menu";
-@import "projects";
-@import "buttons";
+@use "sass:color";
+@use "sass:meta";
+@use "config" as *;
+@use "menu";
+@use "projects";
+@use "buttons";
 
 * {
 	box-sizing: border-box;
@@ -59,7 +61,7 @@ h3 {
 	&.sm-heading {
 		margin-bottom: 2rem;
 		padding: 0.2rem 1rem;
-		background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
+		background: rgba(color.adjust($primary-color, $lightness: 2%), 0.5);
 	}
 }
 
@@ -185,7 +187,7 @@ main {
 		}
 
 		.job {
-			background: lighten($color: $primary-color, $amount: 5);
+			background: color.adjust($primary-color, $lightness: 5%);
 			padding: 1.5rem;
 			border-bottom: $secondary-color 0.3rem solid;
 			overflow: hidden;
@@ -323,7 +325,7 @@ main {
 #main-footer {
 	text-align: center;
 	padding: 1rem;
-	background: darken($color: $primary-color, $amount: 10);
+	background: color.adjust($primary-color, $lightness: -10%);
 	color: setTextColor($primary-color);
 	height: 3.75rem;
 }
@@ -334,4 +336,4 @@ main {
 // 	top: 0;
 // }
 
-@import "mobile";
+@include meta.load-css("mobile");
